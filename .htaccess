@@ -116,8 +116,8 @@ DirectoryIndex index.php index.html index.htm
 
   
   ##all to https
-  RewriteCond %{HTTPS} off
-  RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  #RewriteCond %{HTTPS} off
+ # RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   
   
   # Pass all requests not referring directly to files in the filesystem to
