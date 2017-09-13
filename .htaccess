@@ -116,9 +116,10 @@ DirectoryIndex index.php index.html index.htm
 
   
   ##all to https
-  RewriteCond %{HTTP:X-HTTPS} !1
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-  
+  ##RewriteCond %{HTTP:X-HTTPS} !1
+  ##RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+  RewriteCond %{HTTPS} off
+	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
   
   # Pass all requests not referring directly to files in the filesystem to
   # index.php. Clean URLs are handled in drupal_environment_initialize().
