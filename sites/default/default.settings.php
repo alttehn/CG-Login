@@ -1,5 +1,30 @@
 <?php
 
+if (!empty($_COOKIE['Drupal_visitor_SSOLogin'])) {
+  $conf['cache'] = FALSE;
+}
+ 
+
+$databases = array (
+
+  'default' => 
+ array (
+    'default' => 
+    array (
+      'database' => getenv("CT_LOGINDB_DB"),
+      'username' => getenv("CT_LOGINDB_USER"),
+      'password' => getenv("CT_LOGINDB_PASS"),
+      'host' => getenv("CT_LOGINDB_HOST"),
+      'port' => getenv("CT_LOGINDB_PORT"),
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
+
+  
+
+);
+
 /**
  * @file
  * Drupal site-specific configuration file.
