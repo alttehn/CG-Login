@@ -293,26 +293,22 @@ if (!empty($_COOKIE['Drupal_visitor_SSOLogin'])) {
   $conf['cache'] = FALSE;
 }
  
-
 $databases = array (
-
   'default' => 
- array (
+  array (
     'default' => 
     array (
-      'database' => getenv("CT_LOGINDB_DB"),
-      'username' => getenv("CT_LOGINDB_USER"),
-      'password' => getenv("CT_LOGINDB_PASS"),
-      'host' => getenv("CT_LOGINDB_HOST"),
-      'port' => getenv("CT_LOGINDB_PORT"),
+      'database' => 'login',
+      'username' => 'admin32167M',
+      'password' => 'Mik368zdE',
+      'host' => '192.168.99.100',
+      'port' => '30681',
       'driver' => 'mysql',
       'prefix' => '',
     ),
   ),
-
-  
-
 );
+
 /**
  * Access control for update.php script.
  *
