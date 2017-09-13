@@ -287,6 +287,12 @@
  *   );
  * @endcode
  */
+ 
+ // Disable the page cache if an SSO login cookie is set.
+if (!empty($_COOKIE['Drupal_visitor_SSOLogin'])) {
+  $conf['cache'] = FALSE;
+}
+ 
 $databases = array (
   'default' => 
   array (
