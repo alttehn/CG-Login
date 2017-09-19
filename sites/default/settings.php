@@ -308,7 +308,8 @@ $databases = array (
     ),
   ),
 );*/
-
+$conf['https'] = TRUE;
+$_SERVER['HTTPS'] = 'on';
 
 $databases = array (
   'default' => 
