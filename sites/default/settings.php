@@ -310,16 +310,18 @@ $databases = array (
 );*/
 
 
- $domain = ltrim(strtolower($_SERVER['HTTP_HOST']), 'a.');
-  $secure = !empty($GLOBALS['https']);
+// $domain = ltrim(strtolower($_SERVER['HTTP_HOST']), 'a.');
+ // $secure = !empty($GLOBALS['https']);
 
   
 if (isset($_COOKIE['Drupal.visitor.SSOLogin'])) {
-		setcookie('Drupal.visitor.SSOLogin', '', time() - 3600, '/', $domain, $secure);
+	setcookie('Drupal.visitor.SSOLogin', '');
+	//	setcookie('Drupal.visitor.SSOLogin', '', time() - 3600, '/', $domain, $secure);
 }
 
 if (isset($_COOKIE['Drupal.visitor.SSOLogout'])) {
-	setcookie('Drupal.visitor.SSOLogout', '', time() - 3600, '/', $domain, $secure);
+	setcookie('Drupal.visitor.SSOLogout', '');
+	//	setcookie('Drupal.visitor.SSOLogout', '', time() - 3600, '/', $domain, $secure);
 
 // global $user;
 //if($user->uid != 0)
