@@ -309,14 +309,19 @@ $databases = array (
   ),
 );*/
 
+
+ $domain = ltrim(strtolower($_SERVER['HTTP_HOST']), 'a.');
+  $secure = !empty($GLOBALS['https']);
 // global $user;
 //if($user->uid != 0)
 {
-setcookie('Drupal.visitor.SSOLogin','',time() - 3600);
+
+		setcookie('Drupal.visitor.SSOLogin', '', time() - 3600, '/', $domain, $secure);
+
 }
 //else 
 {
-setcookie('Drupal.visitor.SSOLogout','',time() - 3600);	
+	setcookie('Drupal.visitor.SSOLogout', '', time() - 3600, '/', $domain, $secure);
 }
 
 $conf['https'] = TRUE;
