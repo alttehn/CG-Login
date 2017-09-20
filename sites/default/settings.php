@@ -309,7 +309,7 @@ $databases = array (
   ),
 );*/
 
-
+/*
  $domain = ltrim(strtolower($_SERVER['HTTP_HOST']), 'a.');
  $secure = !empty($GLOBALS['https']);
 
@@ -325,7 +325,7 @@ if (isset($_COOKIE['Drupal.visitor.SSOLogout'])) {
 }
 // global $user;
 //if($user->uid != 0)
-
+*/
 
 $conf['https'] = TRUE;
 $_SERVER['HTTPS'] = 'on';
