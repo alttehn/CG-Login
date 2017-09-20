@@ -29,7 +29,7 @@ $network = array(
  $https = true;
 
 // Enable adding the domain name to the cookie name.
- $cookie_name_strict = true;
+// $cookie_name_strict = true;
 
 // Validate the query parameters and network size.
 if (!sso_validate_query_params() || count($network) < 2) {
