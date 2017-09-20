@@ -53,7 +53,7 @@ foreach ($network as $delta => $site) {
 $network = array_values($network);
 
 if (ltrim($host, 'a.') == $origin_domain) {
-	 sso_create_cookie($_GET['op']);
+	// sso_create_cookie($_GET['op']);
   // We are on the site which has started the process.
   // No need to create the cookie, the site already handled its login / logout.
   // Start from the beginning of the redirect list.
