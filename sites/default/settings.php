@@ -310,12 +310,12 @@ $databases = array (
 );*/
 
 
-// $domain = ltrim(strtolower($_SERVER['HTTP_HOST']), 'a.');
- // $secure = !empty($GLOBALS['https']);
+ $domain = ltrim(strtolower($_SERVER['HTTP_HOST']), 'a.');
+ $secure = !empty($GLOBALS['https']);
 
   
 if (isset($_COOKIE['Drupal.visitor.SSOLogin'])) {
-	setcookie('Drupal.visitor.SSOLogin', '');
+//	setcookie('Drupal.visitor.SSOLogin', '');
 		setcookie('Drupal.visitor.SSOLogin', '', time() - 3600, '/', $domain, $secure);
 }
 
