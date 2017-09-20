@@ -18,6 +18,7 @@ if (empty($_SERVER['HTTP_HOST'])) {
 $network = array(
    'login-dev.numberonegamer.com/sso.php',
    'bank-dev.numberonegamer.com/sso.php',
+   'bank-dev.numberonegamer.com/sso.php',
 );
 
 // An array of network domain names. The keys are potential origin host names
@@ -50,14 +51,14 @@ foreach ($network as $delta => $site) {
   }
 }
 $network = array_values($network);
-/*
+
 if (ltrim($host, 'a.') == $origin_domain) {
   // We are on the site which has started the process.
   // No need to create the cookie, the site already handled its login / logout.
   // Start from the beginning of the redirect list.
   $redirect_destination = sso_redirect_url($network[0], !empty($https));
 }
-else*/ {
+else  {
   sso_create_cookie($_GET['op']);
 
   foreach ($network as $delta => $site) {
