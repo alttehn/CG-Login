@@ -17,6 +17,7 @@ if (empty($_SERVER['HTTP_HOST'])) {
 // Example url (SSO script in the Drupal directory): "firstsite.com/sso.php"
 $network = array(
    'bank-dev.numberonegamer.com/sso.php',
+    'a.gateway.numberonegamer.com',
   
 );
 
@@ -32,7 +33,7 @@ $network = array(
 // $cookie_name_strict = true;
 
 // Validate the query parameters and network size.
-if (!sso_validate_query_params() || count($network) < 1) {
+if (!sso_validate_query_params() || count($network) < 2) {
   exit;
 }
 
