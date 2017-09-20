@@ -312,15 +312,13 @@ $databases = array (
 
  $domain = ltrim(strtolower($_SERVER['HTTP_HOST']), 'a.');
   $secure = !empty($GLOBALS['https']);
-// global $user;
-//if($user->uid != 0)
-{
 
+  
+if (isset($_COOKIE['Drupal.visitor.SSOLogin'])) {
 		setcookie('Drupal.visitor.SSOLogin', '', time() - 3600, '/', $domain, $secure);
-
 }
-//else 
-{
+
+if (isset($_COOKIE['Drupal.visitor.SSOLogout'])) {
 	setcookie('Drupal.visitor.SSOLogout', '', time() - 3600, '/', $domain, $secure);
 }
 
