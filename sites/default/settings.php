@@ -309,7 +309,6 @@ $databases = array (
   ),
 );*/
 
- global $user;
 if($user->uid != 0){
 unset($_COOKIE['Drupal.visitor.SSOLogin']);	
 }
