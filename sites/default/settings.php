@@ -309,11 +309,12 @@ $databases = array (
   ),
 );*/
 
- global $user;
-if($user->uid != 0){
+// global $user;
+//if($user->uid != 0)
+{
 setcookie('Drupal.visitor.SSOLogin','',time() - 3600);
 }
-else 
+//else 
 {
 setcookie('Drupal.visitor.SSOLogout','',time() - 3600);	
 }
