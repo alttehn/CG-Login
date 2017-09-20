@@ -308,6 +308,16 @@ $databases = array (
     ),
   ),
 );*/
+
+ global $user;
+if($user->uid != 0){
+unset($_COOKIE['Drupal.visitor.SSOLogin']);	
+}
+else 
+{
+unset($_COOKIE['Drupal.visitor.SSOLogout']);		
+}
+
 $conf['https'] = TRUE;
 $_SERVER['HTTPS'] = 'on';
 
