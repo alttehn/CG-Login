@@ -309,12 +309,13 @@ $databases = array (
   ),
 );*/
 
+ global $user;
 if($user->uid != 0){
-unset($_COOKIE['Drupal.visitor.SSOLogin']);	
+setcookie('Drupal.visitor.SSOLogin','',time() - 3600);
 }
 else 
 {
-unset($_COOKIE['Drupal.visitor.SSOLogout']);		
+setcookie('Drupal.visitor.SSOLogout','',time() - 3600);	
 }
 
 $conf['https'] = TRUE;
