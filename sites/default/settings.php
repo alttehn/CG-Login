@@ -314,12 +314,14 @@ $databases = array (
  $secure = !empty($GLOBALS['https']);
 
   
-if (isset($_COOKIE['Drupal.visitor.SSOLogin'])) {
+//if (isset($_COOKIE['Drupal.visitor.SSOLogin'])) 
+{
 	//setcookie('Drupal.visitor.SSOLogin', '');
 		setcookie('Drupal.visitor.SSOLogin', '', time() - 3600, '/', '.'+$domain, $secure);
 }
 
-if (isset($_COOKIE['Drupal.visitor.SSOLogout'])) {
+//if (isset($_COOKIE['Drupal.visitor.SSOLogout'])) 
+{
 //	setcookie('Drupal.visitor.SSOLogout', '');
 		setcookie('Drupal.visitor.SSOLogout', '', time() - 3600, '/', '.'+$domain, $secure);
 }
